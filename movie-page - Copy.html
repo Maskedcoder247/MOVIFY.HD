@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="1000" />
+
+    <!--==Title======================-->
+    <title>Movie Name - Movify.hd</title>
+
+    <!--==Stylesheet(CSS)===========================-->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!--==Script(JS)====================-->
+    <script src="script.js">
+      defer
+    </script>
+    <link rel="stylesheet" href="me.html" />
+
+    <!--==Fav-icon===========================-->
+    <link rel="shortcut icon" href="" />
+
+    <!--==Import-poppins-font======================-->
+    <link rel="preconnect" href="https://sfont.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0" />
+
+    <!--==Import-Monoton-Font=====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--==Using-Font-Awesome===================-->
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+    </script>
+  </head>
+  <body>
+    <!--==Scroll-Progress-bar====================-->
+    <div id="progress">
+      <span id="progress-value"></span>
+    </div>
+    <!--==Navigation=======================-->
+    <nav class="navigation">
+      <!--menu-btn----------------->
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <!--logo-------------------->
+      <a href="index.html" class="logo"> Movify<span>.hd</span> </a>
+      <!--menu-------------------------->
+      <ul class="menu">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Cartoons.html">Cartoons</a></li>
+        <li><a href="Anime.html">Anime</a></li>
+        <li><a href="Tvshows.html">TvShows</a></li>
+        <li><a href="Movies.html">Movies</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <!--Search-box--------------->
+      <form action="" class="search-box">
+        <a href="search.html"></a>
+      </form>
+    </nav>
+    <!--nav-end-->
+
+    <!--==Movie-Banner================================-->
+    <section class="movie-banner">
+      <!--==img============================-->
+      <div class="m-banner-img">
+        <img src="Fav Icon/Movify9.png" alt="" />
+      </div>
+
+      <!--content======================-->
+      <div class="banner-container">
+        <!--title-container**************---->
+        <div class="title-container">
+          <!--title-top=======================-->
+          <div class="title-top">
+            <!--title----->
+            <div class="movie-title">
+              <h1>Trolls World Tour</h1>
+            </div>
+
+            <!--more-about-movie-->
+            <div class="more-about-movie">
+              <span class="class">Full HD</span>
+              <div class="rating">
+                8.2 <img src="Fav Icon/IMDB.png" alt="imbd" />
+              </div>
+              <span>2024</span>
+            </div>
+            <!--language-------------->
+            <div class="language">
+              <span>English</span>
+            </div>
+          </div>
+
+          <!--Title-bottom=================-->
+          <div class="title-bottom">
+            <!--category----->
+            <div class="category">
+              <strong>Category</strong><br />
+              <a href="#"> Action</a>,<a href="#"> Thriller</a>
+            </div>
+            <!--trailor-btn---->
+            <a href="#" class="watch-btn">Watch Trailer</a>
+          </div>
+        </div>
+
+        <!--play-btn*********************--->
+        <div class="play-btn-container">
+          <div class="play-btn">
+            <a href="javascript:void">
+              <i class="fas fa-play"></i>
+            </a>
+          </div>
+        </div>
+
+        <!--Video/full-Movie************************-->
+        <div id="play" class="play">
+          <!--close-btn--->
+          <a href="javascript:void" class="close-movie">
+            <i class="fas fa-items"></i>
+          </a>
+          <!--movie------>
+          <div class="play-movie">
+            <video id="m-video" controls>
+              <source
+                src="movies/Trolls.World.Tour.360P.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Download====================-->
+    <section class="download-movie">
+      <!--container---------------------->
+      <div class="download-container">
+        <!--box---->
+        <div class="download-box">
+          <span><i class="fas fa-server"></i>Server 1</span>
+          <span>English</span>
+          <span>480p</span>
+          <a href="movies/Trolls.World.Tour.360P.mp4" download>Download</a>
+        </div>
+        <!--box---->
+        <div class="download-box">
+          <span><i class="fas fa-server"></i>Server 2</span>
+          <span>English</span>
+          <span>720p</span>
+          <a href="movies/Trolls.World.Tour.360P.mp4" download>Download</a>
+        </div>
+        <!--box---->
+        <div class="download-box">
+          <span><i class="fas fa-server"></i>Server 3</span>
+          <span>English</span>
+          <span>1080p</span>
+          <a href="movies/Trolls.World.Tour.360P.mp4" download>Download</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Banner-end--------------->
+
+    <!--details================================-->
+    <section class="movie-details">
+      <strong>Antman and The Wasp Quantumania</strong>
+      <p></p>
+    </section>
+
+    <script>
+      /*==progress-bar==============*/
+      let scrollPercentage = () => {
+        let scrollProgress = document.getElementById("progress");
+        let progressValue = document.getElementById("progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        let scrollvalue = Math.round((pos * 100) / calcHeight);
+        scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollvalue}%)`;
+      };
+      window.onscroll = scrollPercentage;
+      window.onload = scrollPercentage;
+
+      /*--menu-btn-fixed-when-scroll=========*/
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > 20) {
+          $(".navigation").addClass("fix-icon");
+        } else {
+          $(".navigation").removeClass("fix-icon");
+        }
+      });
+
+      /*==popup-open========================*/
+      $(document).on("click", ".play-btn a", function () {
+        $(".play").addClass("active-popup");
+      });
+      /*==popup-close========================*/
+      $(document).on("click", ".close-movie", function () {
+        $(".play").removeClass("active-popup");
+      });
+      /*==auto-play-when-popup-open==================*/
+      $(".play-btn a").click(function () {
+        $("#m-video")[0].play();
+      });
+      /*==Close-video-when-popup-close======================*/
+      $(".close-movie").click(function () {
+        $("#m-video")[0].pause();
+      });
+    </script>
+  </body>
+</html>

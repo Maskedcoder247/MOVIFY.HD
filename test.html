@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movify Search Bar</title>
+    <style>
+      h1 {
+        color: aqua;
+        align-items: center;
+      }
+      * {
+        background-color: rgb(87, 70, 70);
+      }
+      .search-element {
+        color: aliceblue;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 300px;
+      }
+      .search-container {
+        color: bisque;
+        align-items: center;
+      }
+      #movieInfo img {
+        max-width: 20px;
+      }
+      #movieInfo {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Search container">
+      <div class="search-element">
+        <h1>Search Movify</h1>
+        <input
+          type="text"
+          id="movieTitle"
+          placeholder="Enter Movie Title"
+        /><button onclick="fetchMovie()">Search</button>
+
+        <div id="MovieInfo"></div>
+        <script>
+          function fetchMovie() {
+            const apikey = " f01b5ef";
+            const movieTitleElement = document.getElementById("movieTitle");
+            const movieTitle = movieTitleElement.value.trim();
+            if (movieTitle) {
+              const apiUrl = `http://www.omdbapi.com/?i=tt3896198&apikey=f01b5ef=${encodeURIComponent(
+                movieTitle
+              )}&
+                apikey=${apikey}`;
+              fetch(apiUrl)
+                .then((response) => response.json())
+                .then((data) => {
+                  const movieInfoDiv = document.getElementById("movieInfo");
+                  if (data.Response === "True") {
+                    movieInfoDiv.innerHTML = `<h2>${data.Title} (${data.Year})</h2>
+                            <p><strong>Plot:</strong> ${data.Director}</p>
+                            <p><strong>Plot</strong> ${data.Plot}</p>
+                            src="${data.Poster}" alt="${data.Title} Poster">`;
+                  }
+                })
+                .catch((error) => {
+                  console.error("Error fetching data:", error);
+                  document.getElementById(
+                    "movieInfo"
+                  ).innerHTML = `<p>Error fetching movie data. Please try again later.</p>`;
+                });
+            } else {
+              document.getElementById(
+                "movieInfo"
+              ).innerHTML = `<p>Please enter a movie title.</p>`;
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
